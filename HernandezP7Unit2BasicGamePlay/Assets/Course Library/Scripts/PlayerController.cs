@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject[] foodPrefabs;
     public  float horizontalInput;
     public float speed = 20.0f;
     public float xRange = 20.0f;
@@ -37,4 +38,5 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
+
 }

@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 1689921708359896138}
   - component: {fileID: 3066104337100274617}
   - component: {fileID: 6388640006743221375}
+  - component: {fileID: -7120957324892747235}
   m_Layer: 0
   m_Name: Animal_Doe_01
   m_TagString: Untagged
@@ -538,7 +539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4767045122147446192}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.610001, y: 0.2788105, z: -0.41217804}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
@@ -622,6 +623,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad28796b67fe62a49924da2d0a08e5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &-7120957324892747235
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4767045122147446192}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6349926072928711126
 GameObject:
   m_ObjectHideFlags: 0
