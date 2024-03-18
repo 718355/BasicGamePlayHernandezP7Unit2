@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
     public GameObject[] foodPrefabs;
     public  float horizontalInput;
-    public float speed = 20.0f;
-    public float xRange = 20.0f;
+    public float speed = 30.0f;
+    public float xRange = 30.0f;
+    public float zMin;
+    public float zMax;
+    public float verticalInput;
 
     public GameObject projectilePrefab;
 
@@ -31,6 +35,20 @@ public class PlayerController : MonoBehaviour
 
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        // Move Vertical //
+        horizontalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
+
+        if(transform.position.z < zMin)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zMax);
+        }
+        if(transform.position.z > zMax)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zMax);
+        }
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
