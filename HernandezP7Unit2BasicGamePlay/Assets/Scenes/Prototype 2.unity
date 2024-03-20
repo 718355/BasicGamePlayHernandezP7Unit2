@@ -311,8 +311,6 @@ MonoBehaviour:
   - {fileID: 6711880930931551907, guid: 8cd6fab712098604f946ae2e65b1f042, type: 3}
   - {fileID: 4874380302513768317, guid: 10916c92f2a371840a638c68b01f5bc4, type: 3}
   - {fileID: 27710658915048957, guid: 638c466d3622f0e47a52d5b3bac7ff3c, type: 3}
-  - {fileID: 3009125862041773432, guid: 75bff96db30bdc241947a3879f08c99d, type: 3}
-  - {fileID: 6824296219785678808, guid: 5f628c682246f25498bc120dae506330, type: 3}
 --- !u!4 &369655313
 Transform:
   m_ObjectHideFlags: 0
@@ -605,12 +603,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodPrefabs: []
   horizontalInput: 0
-  speed: 10
-  xRange: 33
-  zMin: -1.5
+  speed: 15
+  xmaxRange: 34
+  xminRange: 9
+  zMin: 5
   zMax: 25
   verticalInput: 0
-  projectilePrefab: {fileID: 8379380890147635378, guid: b2f406a26d2ad8e498b47d3eafb222f5, type: 3}
+  projectilePrefab: {fileID: 83668229471730834, guid: c51cdca8b761b5a47b10d97262ea1275, type: 3}
 --- !u!4 &595166933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 501870527908345920, guid: 980f511af3a0eff41b318842bedc08f6, type: 3}

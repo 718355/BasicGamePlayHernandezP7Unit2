@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] animalPrefabs;
     private float spawnRangeX = 30;
     private float spawnPosZ = 30;
-    private float startDelay = 2;
+    private float startDelay = 1;
     private float spawnInterval = 1.5f;
 
     // Start is called before the first frame update

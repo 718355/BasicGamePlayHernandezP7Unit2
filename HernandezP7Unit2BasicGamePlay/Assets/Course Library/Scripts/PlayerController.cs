@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
     public GameObject[] foodPrefabs;
     public  float horizontalInput;
     public float speed = 30.0f;
-    public float xRange = 30.0f;
+    public float xmaxRange = 30.0f;
+    public float xminRange = 0f;
     public float zMin;
     public float zMax;
     public float verticalInput;
@@ -24,13 +25,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -xRange)
+        if (transform.position.x < -xminRange)
         {
-            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-xminRange, transform.position.y, transform.position.z);
         }
-        if (transform.position.x > xRange)
+        if (transform.position.x > xmaxRange)
         {
-            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+            transform.position = new Vector3(xmaxRange, transform.position.y, transform.position.z);
         }
 
         horizontalInput = Input.GetAxis("Horizontal");
