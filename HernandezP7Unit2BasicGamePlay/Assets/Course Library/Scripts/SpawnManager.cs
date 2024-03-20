@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] animalPrefabs;
+    public float sideSpawnMinZ;
+    public float sideSpawnMaxZ;
+    public float sideSpawnX;
+
     private float spawnRangeX = 30;
     private float spawnPosZ = 30;
     private float startDelay = 1;
@@ -28,5 +33,24 @@ public class SpawnManager : MonoBehaviour
 
         Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
     }
+    void SpawnLeftAnimal()
+    {
+        int animalIndex = Random.Range(0, animalPrefabs.Length);
+        Vector3 spawnPos = new Vector3(-sideSpawnX, 0, Random.Range(sideSpawnMinZ, sideSpawnMaxZ));
+        Vector3 rotation = new Vector3(0, 90, 0);
+        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+    }
 
-}
+    void SpawnRightAnimal()
+    {
+        int animalIndex = Random.Range(0, animalPrefabs.Length);
+        Vector3 spawnPos = new Vector3(sideSpawnX, 0, Random.Range(sideSpawnMinZ, sideSpawnMaxZ));
+        Vector3 rotation = new Vector3(0, -90, 0);
+        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+        {
+
+        }
+        {
+
+        }
+   
