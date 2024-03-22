@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -35,9 +36,14 @@ public class DestroyOutOfBounds : MonoBehaviour
             Destroy(gameObject);
         }
         {
-            gameManager.AddLives(-1);
-            Destroy(gameObject);
+            if(transform.position.x < -sideBound)
+            {
+                gameManager.AddLives(-1);
+                Destroy(gameObject);
+            }
         }
-
+        {
+            
+        }
     }
 }

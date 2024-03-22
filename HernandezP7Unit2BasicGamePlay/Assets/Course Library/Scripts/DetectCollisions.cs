@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+    private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -17,17 +18,19 @@ public class DetectCollisions : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Game Over");
+            gameManager.AddLives(-1);
             Destroy(gameObject);
         }
-        else
+        else if (other.CompareTag("sand"))
         {
+            
             Destroy(gameObject);
             Destroy(other.gameObject);
+            gameManager.AddScore(5);
         }
+        
     }
 }
