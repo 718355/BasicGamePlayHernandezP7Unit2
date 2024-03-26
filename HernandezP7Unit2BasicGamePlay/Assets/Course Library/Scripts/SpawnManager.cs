@@ -40,6 +40,13 @@ public class SpawnManager : MonoBehaviour
     {
         int animalIndex = Random.Range(0, animalPrefabs.Length);
         Vector3 spawnPos = new Vector3(-sideSpawnX, 0, Random.Range(sideSpawnMinZ, sideSpawnMaxZ));
+<<<<<<< HEAD
+        Vector3 rotation = new Vector3(0, 90, 0);
+        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+
+    }
+        
+=======
         Vector3 rotation = new Vector3(-14, -270, 2);
         Instantiate(animalPrefabs[animalIndex], spawnPos, Quaternion.Euler(rotation));
     }
@@ -58,3 +65,4 @@ public class SpawnManager : MonoBehaviour
 }
         
    
+>>>>>>> a8a4e9e7bc76ad8b8d714152a3b010a97f1a6a50
